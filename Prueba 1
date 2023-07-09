@@ -1,4 +1,4 @@
-package Grafico;
+ package Grafico;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -70,10 +70,10 @@ private JPanel contentPane;
     txt11.setColumns(10);
 
     
-    int[][] matriz1 = new int[3][3];
-    int[][] matriz2 = new int[3][3];
-    int[][] resultado = new int[3][3];
-    int[][] matriz1g = new int[3][3];
+    float[][] matriz1 = new float[3][3];
+    float[][] matriz2 = new float[3][3];
+    float[][] resultado = new float[3][3];
+    float[][] matriz1g = new float[3][3];
     matriz1[0][0] = Integer.parseInt(txt11.getText());
     matriz1[0][1] = Integer.parseInt(txt12.getText());
     matriz1[0][2] = Integer.parseInt(txt13.getText());
@@ -94,32 +94,33 @@ private JPanel contentPane;
     matriz2[2][1] = Integer.parseInt(txt232.getText());
     matriz2[2][2] = Integer.parseInt(txt233.getText());
 	
-    if (operacion = "+") {
+    String operacion;
+	if (operacion == "+") {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 resultado[i][j] = matriz1[i][j] + matriz2[i][j];
             }
         }
     } 
-    else if (operacion = "-") {
+    else if (operacion == "-") {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 resultado[i][j] = matriz1[i][j] - matriz2[i][j];
             }
         }
     }
-    else if (operacion = "Deter") {
+    else if (operacion == "Deter") {
    	 float txtResDeter = (matriz1[0][0] * matriz1[1][1] * matriz1[2][2]) + (matriz1[1][0] * matriz1[2][1] * matriz1[0][2]) + (matriz1[2][0] * matriz1[0][1] * matriz1[1][2]);
      txtResDeter = txtResDeter - (matriz1[2][0] * matriz1[1][1] * matriz1[0][2]) - (matriz1[0][0] * matriz1[2][1] * matriz1[1][2]) - (matriz1[1][0] * matriz1[0][1] * matriz1[2][2]);
     }
-    else if (operacion = "Escal") {
+    else if (operacion == "Escal") {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
             	float txtResEsc = matriz1[i][j] * txtResEsc;
             }
         }
     }
-    else if (operacion = "x") {
+    else if (operacion == "x") {
     resultado[0][0] = (matriz1[0][0] * matriz2[0][0] + matriz1[0][1] * matriz2[1][0] + matriz1[0][2] * matriz2[2][0]);
     resultado[0][1] = (matriz1[0][0] * matriz2[0][1] + matriz1[0][1] * matriz2[1][1] + matriz1[0][2] * matriz2[2][1]);
     resultado[0][2] = (matriz1[0][0] * matriz2[0][2] + matriz1[0][1] * matriz2[1][2] + matriz1[0][2] * matriz2[2][2]);
@@ -130,7 +131,7 @@ private JPanel contentPane;
     resultado[2][1] = (matriz1[2][0] * matriz2[0][1] + matriz1[2][1] * matriz2[1][1] + matriz1[2][2] * matriz2[2][1]);
     resultado[2][2] = (matriz1[2][0] * matriz2[0][2] + matriz1[2][1] * matriz2[1][2] + matriz1[2][2] * matriz2[2][2]);
     }
-    else if (operacion = "Invers") {
+    else if (operacion == "Invers") {
     float txtResDeter = (matriz1[0][0] * matriz1[1][1] * matriz1[2][2]) + (matriz1[1][0] * matriz1[2][1] * matriz1[0][2]) + (matriz1[2][0] * matriz1[0][1] * matriz1[1][2]);
     txtResDeter = txtResDeter - (matriz1[2][0] * matriz1[1][1] * matriz1[0][2]) - (matriz1[0][0] * matriz1[2][1] * matriz1[1][2]) - (matriz1[1][0] * matriz1[0][1] * matriz1[2][2]);
      if (txtResDeter == 0) {
@@ -154,7 +155,7 @@ private JPanel contentPane;
          }
      }	 
     }
-    else if (operacion = "/") {
+    else if (operacion == "/") {
     	
     }
     

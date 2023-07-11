@@ -30,7 +30,7 @@ public class CalculadoraMatriz extends JFrame {
     private JTextField txt231;
     private JTextField txt212;
     private JTextField txt222;
-    private JTextField txt232;
+    private JTextField txt232;u
     private JTextField txt213;
     private JTextField txt223;
     private JTextField txt233;
